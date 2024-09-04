@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-gray: #2C3E50;
+    --secondary-gray: #34495E;
+    --gold: #F1C40F;
+    --cream: #ECF0F1;
+    --soft-brown: #D35400;
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+    --bg-light: #f9f9f9;
+}
+
+body {
+    background-color: var(--bg-light);
+    background-image:
+        radial-gradient(circle at 100% 100%, rgba(241, 196, 15, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, rgba(41, 128, 185, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.search-page {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-inputs {
+    background: linear-gradient(135deg, var(--primary-gray), var(--secondary-gray));
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+}
+
+.one h1 {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.categories-dropdown,
+.categories-city {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--cream);
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+select,
+input[type="text"] {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--cream);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.3);
+}
+
+.myButton {
+    background-color: var(--gold);
+    color: var(--primary-gray);
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.myButton:hover {
+    background-color: #F39C12;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.all-rest-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--soft-brown);
+    color: var(--white);
+}
+
+.all-rest-btn:hover {
+    background-color: #E67E22;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    color: var(--primary-gray);
+}
+
+.dataResult {
+    margin-top: 2rem;
+}
+
+.dataResult ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dataResult li {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.dataResult li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1.5rem;
+}
+
+.results-link {
+    color: var(--primary-gray);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.results-link:hover {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    .search-page {
+        padding: 1rem;
+    }
+
+    .search-inputs {
+        padding: 1.5rem;
+    }
+
+    .dataResult li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .restaurant-photo {
+        width: 100%;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

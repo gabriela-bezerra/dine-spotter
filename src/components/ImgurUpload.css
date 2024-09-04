@@ -1,0 +1,21 @@
+.imgur-upload {
+    margin-top: 20px;
+}
+
+.upload-button {
+    display: inline-block;
+    background-color: #7f8c8d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #95a5a6;
+}
+
+.upload-button:active {
+    background-color: #6c7a7d;
+}
